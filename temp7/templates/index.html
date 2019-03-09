@@ -1,0 +1,13 @@
+{% block body %}
+<ul>
+  {% for note in notes %}
+  <li>
+    {{ note }}
+  </li>
+  {% endfor %}
+</ul>
+<form class="" action="{{ url_for('index')}}" method="post">
+  <input type="text" name="note" placeholder="Enter note here">
+  <button> Add Note </button>
+</form>
+{% endblock %}
